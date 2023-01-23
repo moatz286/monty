@@ -77,6 +77,8 @@ void pstr(stack_t **stack, unsigned int line_number);
 void free_stack(int status, void *arg);
 void fs_close(int status, void *arg);
 void free_lineptr(int status, void *arg);
+int on_exit(void (*function)(int, void *), void *arg);
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 stack_t *add_node(stack_t **stack, const int n);
 
 #endif /* _MONTY_H_ */
